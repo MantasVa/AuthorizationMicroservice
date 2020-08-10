@@ -29,7 +29,7 @@ AuthorizationMicroservice project uses onion architecture [more about here](http
 Project structure:
 
 
-![Untitled](uploads/de4c4cb791972e53276c280a68b028d8/Untitled.png)
+![logo](https://res.cloudinary.com/practicaldev/image/fetch/s--sWdyI1q4--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/dhti2v0e1smn055tages.png)
 
 Components within the layered architecture pattern are organized into layers, each layer performing a specific role within the application (e.g., **business logic**). Although the layered architecture pattern does not specify the number and types of layers that must exist in the pattern, most layered architectures consist of four standard layers: presentation (**API**), business(**APPLICATION**), persistence, and database(**DOMAIN**). In some cases, the business layer and persistence layer are combined into a single business layer, particularly when the persistence logic (e.g., **SQL** or **NoSQL**) is embedded within the business layer components. Thus, smaller applications may have only three layers, whereas larger and more complex business applications may contain five or more layers.
 
