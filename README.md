@@ -60,7 +60,7 @@ As you can see request body information is mapped to the `Login.Command` class a
 -   Persisting data (to the DAL)
 -   Sending data (to the API layer)
 
-This layers contains **CryptographyService**, **Dto**, **HintService**, **Intrastructure**, **MediatorNotifications**, **UserService**.
+This layers contains **CryptographyService**, **Dto**, **HintService**, **Intrastructure**, **UserService**.
 
 This layer handles main logic behind CQRS pattern. Each controller has its own handler for example Login controller is handled by the `UserService.Login` class and these classes consist of 2 nested classes. If request is safe (**HTTP GET**) then we create **Query** and **Handler** classes, if request is not safe (HTTP POST, PUT, DELETE) **Command** and **Handler** is created. To help implement CQRS application layer uses [Mediatr](https://dotnetcoretutorials.com/2019/04/30/the-mediator-pattern-part-3-mediatr-library/) library. Query or Command contains request properties and Handler handles these properties.
 
