@@ -101,7 +101,7 @@ For **database** we use **MongoDb**. MongoDB is a cross-platform document-orient
             var client = new MongoClient();
             _table = settings.Value.Table;
             if (client != null)
-                _database = client.GetDatabase(settings.Value.Database);
+                _database = client.GetDatabase("AuthorizationMicroservice");
         }
 
         public IMongoCollection<T> Collection
@@ -114,17 +114,6 @@ For **database** we use **MongoDb**. MongoDB is a cross-platform document-orient
     }
 ```
 
-Parameters for this class is passed from `appsettings.json` 
-
-```json
-{
-  "MongoConnection": {
-    "ConnectionString": "mongodb://admin:abc123!@localhost",
-    "Database": "ioCubeBackend",
-    "Table": "Users"
-  }
-}
-```
 
 Two main properties need to be initialized in order to run the database. 
 
