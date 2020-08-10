@@ -20,12 +20,12 @@ Helpful articles
 
 - Clone this repository
 - Build the solution using Visual Studio, or on the command line with **dotnet build**.
-- Run the iocubebackend.API project. The API will start up on http://localhost:3002 with **dotnet run**.
+- Run the AuthorizationMicroservice.API project. The API will start up on http://localhost:3002 with **dotnet run**.
 - Use an HTTP client like Postman or Fiddler to GET http://localhost:3002.
 
 # 4. Architecture overview
 
-ioCubeBackend project uses onion architecture [more about here](https://www.codeguru.com/csharp/csharp/cs_misc/designtechniques/understanding-onion-architecture.html#:~:text=Onion%20Architecture%20is%20based%20on,on%20the%20actual%20domain%20models.). 
+AuthorizationMicroservice project uses onion architecture [more about here](https://www.codeguru.com/csharp/csharp/cs_misc/designtechniques/understanding-onion-architecture.html#:~:text=Onion%20Architecture%20is%20based%20on,on%20the%20actual%20domain%20models.). 
 Project structure:
 
 
@@ -37,7 +37,7 @@ One of the powerful features of the layered architecture pattern is the separati
 
 ## API layer
 
-This layer contains all configuration, startup, controller files. In controllers ioCubeBackend uses CQRS.
+This layer contains all configuration, startup, controller files. In controllers AuthorizationMicroservice uses CQRS.
 **CQRS** is an architectural **pattern**. CQRS pattern states that the data read operation and write operation should be separated. This makes our controllers clean and easy to maintain because all required logic is handled by **Queries**, **Commands** and **Handlers** these classes are located in the **Application layer**. Controller e.g.:
 ```csharp
  public async Task<ActionResult<AccessTokenDto>> Login([FromBody] Login.Command command)
